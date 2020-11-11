@@ -45,3 +45,14 @@ Student.prototype.showAge = function() {
 // for (let key in s1) {
 //   console.log(key);
 // }
+
+//Prototype tree
+// console.log(Object.prototype); //return Object.prototype
+let a = {};
+// console.log(Object.getPrototypeOf(a)); //returns Object.prototype
+// console.log(Object.getPrototypeOf(Object.prototype)); //null
+let b = [];
+// console.log(Object.getPrototypeOf(b));//Array.prototype
+// console.log(Object.getPrototypeOf(Array.prototype)); //Object.prototype
+let c = "";
+// console.log(Object.getPrototypeOf(c)); //String.prototype
