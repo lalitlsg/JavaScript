@@ -26,3 +26,5 @@ let profile2 = {
 };
 
 profile1.show.call(profile2, "PQR", "Mumbai");
+
+// profile1.disp("jkcbdsj", "cdjbsj");
