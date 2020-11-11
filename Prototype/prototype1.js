@@ -33,5 +33,15 @@ Student.prototype.showAge = function() {
 // s1.showName();
 // s2.showName();
 
-s1.showAge();
-s2.showAge();
+// s1.showAge();
+// s2.showAge();
+
+//iterate through instance member
+
+//will only shows instance member
+// console.log(Object.keys(s1));
+
+//will show both instance as well as prototype member
+// for (let key in s1) {
+//   console.log(key);
+// }
