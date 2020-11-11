@@ -10,7 +10,7 @@ let profile1 = {
     console.log(`${this.name} works at ${company} as ${this.desg} in ${city}`);
   },
 
-  //Note : In Object method if we use arrow function then it will refers to window object
+  //Note : In Object method if we use arrow function then "this" keyword will refers to window object
   disp: (company, city) => {
     console.log(this); //refers to window object
     console.log(`${this.name} works at ${company} as ${this.desg} in ${city}`);
