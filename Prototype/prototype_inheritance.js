@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 function Father(sonName, fatherAge, profession) {
   this.sonName = sonName;
