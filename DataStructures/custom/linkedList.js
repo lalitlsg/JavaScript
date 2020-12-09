@@ -57,11 +57,14 @@ class LinkedList {
     while (current) {
       if (this.head.element === element) {
         this.shift();
-        break;
+        previous = current;
+        current = current.next;
+        // break;
       } else if (current.element === element) {
         previous.next = current.next;
+        current = current.next;
         this.length--;
-        break;
+        // break;
       } else {
         previous = current;
         current = current.next;
@@ -106,11 +109,12 @@ linked.append(30);
 linked.append(40);
 linked.append(50);
 linked.prepend(-10);
+linked.append(10);
 // linked.pop();
 // linked.pop();
 // linked.shift();
 // linked.shift();
-// linked.removeElement(-10);
-linked.addElement(-20, 0);
+linked.removeElement(10);
+// linked.addElement(-20, 0);
 console.log(linked.printList());
 console.log(linked.length);
