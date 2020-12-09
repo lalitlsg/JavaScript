@@ -61,6 +61,7 @@ class Samsung extends Mobile {
   //prototype member
   //override super class display method
   display() {
+    console.log(this);
     return `Sub class display method`;
   }
   showPrice() {
@@ -83,6 +84,7 @@ let s1 = new Samsung("galexy", 5000, "Nov", 2012);
 // console.log(s1);
 // console.log(s2);
 
+s1.display();
 // Samsung.writeClass();
 // Mobile.writeClass();
 

@@ -5,9 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
+    <style></style>
   </head>
-  <body>
-    JavaScript Prototypes
-    <script src="prototype_inheritance.js"></script>
-  </body>
+  <body></body>
+  <script>
+    const show = (a, b) => {
+      debugger;
+      let min = Math.min([...a, ...b]);
+      let max = Math.max([...a, ...b]);
+      let no = min;
+      let factors = [];
+      let final_factors = [];
+      let l1 = a.length;
+      let l2 = b.length;
+      while (no <= max) {
+        let a_count = 0;
+        for (let i = 0; i < l1; i++) {
+          if (no % a[i] === 0) {
+            a_count++;
+          }
+        }
+        if (a_count === l1) {
+          factors.push(no);
+        }
+        no++;
+      }
+      return factors;
+    };
+
+    let res = show([2, 6], [24, 36]);
+    console.log(res);
+  </script>
 </html>
