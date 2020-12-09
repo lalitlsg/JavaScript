@@ -38,6 +38,9 @@ class LinkedList {
   }
 
   pop() {
+    if (!this.head) {
+      return null;
+    }
     let current = this.head;
     while (current.next.next) {
       current = current.next;
@@ -47,11 +50,17 @@ class LinkedList {
   }
 
   shift() {
+    if (!this.head) {
+      return null;
+    }
     this.head = this.head.next;
     this.length--;
   }
 
   removeElement(element) {
+    if (!this.head) {
+      return null;
+    }
     let current = this.head;
     let previous = this.head;
     while (current) {
@@ -59,12 +68,10 @@ class LinkedList {
         this.shift();
         previous = current;
         current = current.next;
-        // break;
       } else if (current.element === element) {
         previous.next = current.next;
         current = current.next;
         this.length--;
-        // break;
       } else {
         previous = current;
         current = current.next;
@@ -89,6 +96,22 @@ class LinkedList {
     this.length++;
   }
 
+  findIndex(element) {
+    if (!this.head) {
+      return null;
+    }
+    let current = this.head;
+    let iterator = 0;
+    while (current) {
+      if (current.element === element) {
+        return iterator;
+      }
+      iterator++;
+      current = current.next;
+    }
+    return null;
+  }
+
   printList() {
     let list_elements = "";
     let current = this.head;
@@ -102,19 +125,23 @@ class LinkedList {
 
 const linked = new LinkedList();
 
-linked.prepend(0);
 linked.append(10);
+linked.append(10);
+linked.append(20);
 linked.append(20);
 linked.append(30);
 linked.append(40);
 linked.append(50);
-linked.prepend(-10);
-linked.append(10);
+// linked.prepend(0);
+// linked.prepend(-10);
 // linked.pop();
 // linked.pop();
 // linked.shift();
 // linked.shift();
-linked.removeElement(10);
+// linked.removeElement(10);
+// linked.removeElement(20);
+// linked.removeElement(50);
 // linked.addElement(-20, 0);
 console.log(linked.printList());
-console.log(linked.length);
+// console.log(linked.length);
+console.log(linked.findIndex(500));
