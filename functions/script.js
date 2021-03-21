@@ -40,3 +40,15 @@
 //If you try to access variable in temporal dead zone, it will give reference error.
 //let & const are not attach to window/this object
 //redeclaration is not possible in case of let & const unlike var.
+
+//block scope and shadowing
+// let b = 100;
+// let d = 30;
+// {
+//   var a = 10;
+//   let b = 20;
+//   const c = 20;
+//   console.log(b);
+//   var d = 30; // let cannot be shadow using var, illegal shadowing. But vice verasa is possible.
+// }
+// console.log(b);
