@@ -17,3 +17,26 @@
 // const res = a();
 // console.log(res);
 // res(); //op = 90
+
+// functions along with its lexical scope bundled together is called closures.
+
+// ex-4
+// const a = () => {
+//   const x = 10;
+//   return () => () => console.log(x);
+// };
+// a()()();
+
+// ex-5
+// const a = () => {
+//   const x = 10;
+//   const b = () => {
+//     const y = 20;
+//     const c = () => {
+//       console.log(x, y);
+//     };
+//     c();
+//   };
+//   b();
+// };
+// a();
