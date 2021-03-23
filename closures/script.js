@@ -40,3 +40,59 @@
 //   b();
 // };
 // a();
+
+// ex-6
+// const a = () => {
+//   var x = 10;
+//   setTimeout(() => {
+//     console.log(x);
+//   }, 1000);
+// };
+// a();
+
+// ex-7
+// const a = () => {
+//   for (var i = 1; i <= 5; i++) {
+//     setTimeout(() => {
+//       console.log(i);
+//     }, 1000 * i);
+//   }
+// };
+// a(); op: 6 6 6 6 6
+
+// ex-8
+// const a = () => {
+//   for (let i = 1; i <= 5; i++) {
+//     setTimeout(() => {
+//       console.log(i);
+//     }, 1000 * i);
+//   }
+// };
+// a(); op: 1 2 3 4 5
+
+// ex-9
+// const a = () => {
+//   for (var i = 1; i <= 5; i++) {
+//     setTimeout(
+//       (val) => {
+//         console.log(val);
+//       },
+//       1000 * i,
+//       i
+//     );
+//   }
+// };
+// a();
+
+// ex-10
+// const a = () => {
+//   for (var i = 1; i <= 5; i++) {
+//     const b = (val) => {
+//       setTimeout(() => {
+//         console.log(val);
+//       }, 1000 * val);
+//     };
+//     b(i);
+//   }
+// };
+// a();
