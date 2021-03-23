@@ -41,6 +41,7 @@
 // };
 // a();
 
+// closures with setTimeout
 // ex-6
 // const a = () => {
 //   var x = 10;
@@ -96,3 +97,39 @@
 //   }
 // };
 // a();
+
+// ex-11
+// const outest = (val) => {
+//   const outer = (name) => {
+//     const inner = () => {
+//       console.log(a, name, val);
+//     };
+//     //var a = 10; // op: 10
+//     //let a = 10; // op: 10
+//     return inner;
+//   };
+//   //   let a = 100;
+//   return outer;
+// };
+// let a = 1000;
+// outest("Yes")("Lalit")();
+
+//data privacy
+// const increment = () => {
+//   let a = 0;
+//   return () => ++a;
+// };
+// console.log(a);
+// const res = increment();
+// res();
+// res();
+// let data = res();
+// console.log(data);
+
+//sharing common logic
+// const res2 = increment();
+// res2();
+// res2();
+// res2();
+// let data2 = res2();
+// console.log(data2);
