@@ -133,3 +133,23 @@
 // res2();
 // let data2 = res2();
 // console.log(data2);
+
+// constructor function
+// function Counter(count) {
+//   this.increment = () => {
+//     count++;
+//     console.log(count);
+//   };
+//   this.decrement = () => {
+//     count--;
+//     console.log(count);
+//   };
+// }
+
+// const res = new Counter(0);
+// res.increment();
+// res.decrement();
+
+// const res2 = new Counter(5);
+// res2.increment();
+// res2.decrement();
