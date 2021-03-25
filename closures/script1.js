@@ -48,3 +48,12 @@
 // e(() => {
 //   console.log("i'm callback fun");
 // });
+
+//Event Listeners, Callbacks & Closures
+const attachEventListener = () => {
+  let count = 0;
+  document.getElementById("click").addEventListener("click", () => {
+    console.log(`btn clicked ${++count} times`);
+  });
+};
+attachEventListener();
