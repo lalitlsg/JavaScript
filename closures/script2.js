@@ -19,3 +19,8 @@
 
 // Starvation: If microtask queue is very long, then fun inside callback queue will not get a chance
 // to execute for a long time.This is called starvation.
+
+//JS Engine
+//JS garbage collector uses Mark & Sweep Algorithm.
+//optimization of js compiler - inlining, copy elision, inline caching.
+// V8 has interpreater called Ignition, compiler called Turbo Fan & garbage collector called Orinoco/Oilpan.
