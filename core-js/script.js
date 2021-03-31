@@ -33,9 +33,17 @@ let obj2 = {
 //   console.log(`${this.firstname} ${this.lastname}`);
 // };
 
-const print = function () {
-  console.log(`${this.firstname} ${this.lastname}`);
+const print = function (place, age) {
+  console.log(`${this.firstname} ${this.lastname} ${place} ${age}`);
 };
 
-print.call(obj1);
-print.call(obj2);
+// print.call(obj1, "nagpur", 12);
+// print.call(obj2, "pune", 10);
+
+//apply method
+// print.apply(obj1, ["nagpur", 22]);
+// print.apply(obj2, ["pune", 66]);
+
+//bind method
+let show = print.bind(obj2, "mumbai", 33);
+show();
